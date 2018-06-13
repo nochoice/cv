@@ -1,6 +1,43 @@
 include ./mixins/header
 include ./mixins/box
 
+- let workexperience = [
+-        {
+-           position: 'Frontend developer / Technical lead',
+-            company: 'Konica Minolta',
+-            date: '2016 - till now',
+-            responsible: [
+-                'resp. 1',
+-				 'fsdfsdfds sf asdfff asdf'
+-            ],
+-            tags: ['Angular [JS/2]', 'SASS preprocessor', 'Webpack', 'Atlassian stack']
+-        },
+-        {
+-            position: 'JavaScript developer',
+-            company: 'IBA CZ',
+-            date: '2013 - 2016',
+-            responsible: [
+-                'Liferay', 'YUI 3/AlloyUI', 'NodeJS', 'KeystoneJS'
+-            ],
+-            tags: ['Liferay', 'YUI 3/AlloyUI', 'NodeJS', 'KeystoneJS']
+-        },{
+-            position: 'Webmaster',
+-            company: 'Sabris',
+-            date: '2009 - 2013',
+-            responsible: [
+-                
+-            ],
+-            tags: ['HTML', 'CSS', 'JavaScript', 'ActionScript', 'Flash/Flex', 'Gulp']
+-        },{
+-            position: 'Webmaster',
+-            company: 'Cyberstream technology',
+-            date: '2006 - 2009',
+-            responsible: [
+-                'resp. 1',
+-            ],
+-            tags: ['HTML', 'CSS', 'Flash/Flex', 'ActionScript', 'jQuery', 'Photoshop']
+-        }
+-    ]
 doctype html
 html(lang="en")
     head
@@ -11,18 +48,10 @@ html(lang="en")
     body
         include includes/header.pug
 
-
         main
-            .column
-                +header('Work experience')
-                .box-wrapper
-                    +box('Webdesigner/Coder', 'Cyberstream Technology s. r. o / 2006 - 2010', '<b>Responsible</b> for developing Flash applications, coding HTML templates from PSD files.')
-                    +box('Webdesigner/Coder', 'Sabris / 2010 - 2014', 'content')
-
-            .column
-                +header('Education')
-                .box-wrapper
-                    +box('Webdesigner/Coder', 'Cyberstream Technology s. r. o / 2006 - 2010', '<b>Responsible</b> for developing Flash applications, coding HTML templates from PSD files.')
-                    +box('Webdesigner/Coder', 'Sabris / 2010 - 2014', 'content')
+            +header('Work experience')
+            each work in workexperience
+                +box(work)
+           
 
 //https://www.google.cz/search?biw=1920&bih=910&tbm=isch&sa=1&ei=lrkgW6m1HLOlmwW__7nIBQ&q=cv+templates&oq=cv+templates&gs_l=img.3..0i67k1l2j0l3j0i67k1j0l4.1681.1681.0.1844.1.1.0.0.0.0.91.91.1.1.0....0...1c.1.64.img..0.1.90....0.mSBVNGU22SU#imgrc=rm_o-zhAPtJBBM:

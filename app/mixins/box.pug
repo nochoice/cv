@@ -1,5 +1,15 @@
-mixin box(header, subHeader, content)
+mixin box(work)
     .box
-        h3= header
-        h4= subHeader
-        .content!= content
+        h3= work.position 
+        h4
+            = work.company
+            |  / 
+            = work.date
+        .content 
+            ul
+                each resp in work.responsible
+                     li= resp
+
+            
+            each tag in work.tags
+                span.tag= tag
