@@ -1,0 +1,19 @@
+include ./mixins/header
+include ./mixins/box
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+    body
+        include includes/header.pug
+
+
+        main
+            +header('Work experience')
+            .box-wrapper
+                +box('Webdesigner/Coder', 'Cyberstream Technology s. r. o / 2006 - 2010', 'Responsible for developing Flash applications, coding HTML templates from PSD files.')
+                +box('Webdesigner/Coder', 'Sabris / 2010 - 2014', 'content')

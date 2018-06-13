@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+  text-align: center;
+  height: 250px;
+  justify-content: center;
+
+  h1 {
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
