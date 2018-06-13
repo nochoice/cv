@@ -1,10 +1,12 @@
 header {
   display: flex;
   flex-direction: column;
-  background: #eee;
+  background: $color-header-bg;
   text-align: center;
-  height: 250px;
+  height: 200px;
   justify-content: center;
+
+  color: $color-font;
 
   h1 {
     text-transform: uppercase;
@@ -12,5 +14,11 @@ header {
   h2 {
     font-size: 20px;
     font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  hr {
+    border-bottom: 1px dotted $color-font;
+    width: 500px;
   }
 }
